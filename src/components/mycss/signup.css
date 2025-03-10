@@ -1,0 +1,35 @@
+.SignupFrom
+{
+    display: flex;
+    width: 100%;
+}
+
+.imageside{
+ width: 50%;
+}
+.imageside img{
+    width: 100%;
+    height: 100%;
+}
+
+.signupformside{
+    padding-top: 10%;
+    padding-bottom: 20%;
+    width: 50%;
+    height: 100%;
+    justify-content: center;
+    text-align: center;
+}
+.signform p{
+    /* justify-content: center;
+        width: fit-content;
+        margin-left:20px;
+        margin-right: 20px;
+        box-shadow: 5px 5px 5px 5px rgb(96, 96, 96);
+        background-color: #e1e1e1;
+        padding: 10px; */
+        padding-top: 20px;
+}
+.signform img{
+    width: 60px;
+}

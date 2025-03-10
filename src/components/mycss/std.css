@@ -1,0 +1,107 @@
+.table-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .table-container {  
+    width: 100%; 
+    overflow-x: auto; 
+}  
+
+table {  
+    width: auto;
+    border-collapse: collapse;
+}  
+
+th, td { 
+  width: auto;
+    font-size:small ;
+    height: auto;
+    border: 1px solid #ccc;
+    padding: 2px; 
+    text-align: left;
+}  
+  
+  thead {
+    background-color: rgb(39, 39, 39);
+    color: white;
+  }
+  
+
+td input{
+    border-color: rgb(2, 99, 255);
+    width: 100px;
+    height: auto;
+}
+  
+  button {
+    margin: 5px;
+    padding: 5px 10px;
+    border: none;
+    background-color: rgb(50, 50, 50);
+    color: white;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  
+  .pagination {
+    margin-top: 10px;
+  }
+  
+  .pagination button {
+    background: linear-gradient(to right, #4DCFD4, #6C49C5, #6C49C5);
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+    margin: 2px;
+    border-radius: 4px;
+  }
+  
+  
+  tfoot td {
+    padding: 10px;
+    text-align: center;
+    background-color: #f9f9f9;
+  }
+  
+
+  @media only screen and (max-width: 800px) {  
+
+    .card-container {  
+      display: flex;  
+      flex-wrap: wrap;  
+      gap: 16px;
+    }  
+    
+    .card {  
+      border: 1px solid #ccc;  
+      border-radius: 8px;  
+      padding: 16px;  
+      width: calc(100% - 32px); 
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);  
+    }  
+    
+    .card-item {  
+      margin-bottom: 8px; 
+      font-size: medium; 
+    }  
+    
+    .card-actions {  
+      display: flex;  
+      gap: 8px; 
+    }  
+    
+    .card-end-container{
+      align-items: center;
+      text-align: center;
+      width: 100%;
+  
+    }
+    .card-end-item{
+      align-items: center;
+    }
+}  
