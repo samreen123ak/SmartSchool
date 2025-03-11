@@ -16,7 +16,7 @@ function Login() {
     e.preventDefault();
 
     try {
-      const response = await axios.post("http://192.168.1.22:7000/api/v1/auth/email/login", {
+      const response = await axios.post("http://192.168.1.22:7000/api/auth/login", {
         email: email,
         password: password,
       });
@@ -64,7 +64,7 @@ function Login() {
               <br />
               <Button type="submit" variant="outlined">Login</Button>
             </Box>
-            {errorMessage && <p style={{ color: "red" }}>{errorMessage}</p>}
+            {errorMessage && <p>{errorMessage}</p>}
             <p>
               *If you don't have an account <Link to="/signup">Signup</Link>
             </p>

@@ -16,17 +16,16 @@ function Signup() {
 
   const handleSignup = async (e) => {
     e.preventDefault();
-      console.log(e)
+      console.log("first name is:", firstName, "last name is:", lastName, "email:", email, ",password:", password)
+      
     try {
-      const response = await axios.post("http://192.168.1.22:7000/docs/api/v1/auth/email/register",{
+      const response = await axios.post("http://192.168.1.22:7000/api/auth/register",{
+        firstname: firstName,
+        lastname: lastName,
         email: email,
-        password: password,
-        first_name: firstName,
-        last_name: lastName
+        password: password
       });
-      console.log(response.data)
       console.log("Signup Successful:", response.data);
-      alert("Signup successful!");
       navigate("/");
     } catch (error) {
       console.error("Signup failed:", error);
