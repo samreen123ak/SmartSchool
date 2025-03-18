@@ -5,22 +5,20 @@ import "./App.css";
 import Signup from "./components/Signup";  
 import Login from "./components/Login";  
 import Student from "./components/Students";  
-
-function App() {  
+// import PrivateRoute from './components/PrivateRoute';
+function App() { 
+  // const isAuthenticated = localStorage.getItem('jsonwebtoken'); 
   return (  
     <Router>  
       <Routes>  
-        <Route path="/signup" element={<Signup />} />  
-        <Route path="/login" element={<Login />} />  
-        <Route  
-          path="/student"  
-          element={  
-            <Layout>  
-              <Student />  
-            </Layout>  
-          }  
-        />  
-        <Route path="/" element={<Layout />} />  
+        <Route path="/signup" element={<Signup />} />
+        <Route path="/login" element={<Login />} />
+        
+        {/* <Route element={<PrivateRoute isAuthenticated={isAuthenticated} />}>  */}
+        <Route path="/" element={<Layout />} /> 
+          <Route path="/student" element={<Layout><Student /></Layout>} />  
+        {/* </Route>   */}
+         
       </Routes>  
     </Router>  
   );  

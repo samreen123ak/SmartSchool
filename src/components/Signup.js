@@ -19,7 +19,7 @@ function Signup() {
       console.log("first name is:", firstName, "last name is:", lastName, "email:", email, ",password:", password)
       
     try {
-      const response = await axios.post("http://192.168.1.22:7000/api/auth/register",{
+      const response = await axios.post(`${process.env.REACT_APP_API_URL}/api/auth/register`,{
         firstname: firstName,
         lastname: lastName,
         email: email,
